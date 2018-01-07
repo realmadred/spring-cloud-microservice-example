@@ -24,4 +24,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class ConsulProperties {
 
 	private String prop = "default value";
+
+	public String getProp() {
+		return prop;
+	}
+
+	public void setProp(String prop) {
+		this.prop = prop;
+	}
 }
