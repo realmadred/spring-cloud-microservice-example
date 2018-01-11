@@ -1,10 +1,7 @@
 package data.domain.nodes;
 
-import org.neo4j.graphdb.Direction;
-import org.springframework.data.neo4j.annotation.Fetch;
-import org.springframework.data.neo4j.annotation.GraphId;
-import org.springframework.data.neo4j.annotation.NodeEntity;
-import org.springframework.data.neo4j.annotation.RelatedTo;
+import org.neo4j.ogm.annotation.GraphId;
+import org.neo4j.ogm.annotation.NodeEntity;
 
 import java.util.Set;
 
@@ -16,8 +13,6 @@ public class Content {
     private String title;
     private String url;
 
-    @Fetch
-    @RelatedTo(type = "ON", direction = Direction.INCOMING)
     Set<Event> events;
 
     public String getTitle() {
